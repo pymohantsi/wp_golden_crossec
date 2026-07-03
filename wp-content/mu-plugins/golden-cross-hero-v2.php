@@ -441,7 +441,16 @@ function golden_cross_output_hero_v2_css() {
 		}
 
 		.gc-hero-v2-slider .et-pb-controllers {
-			display: none;
+			left: 24px;
+			right: auto;
+			display: flex;
+			text-align: left;
+		}
+	}
+
+	@media (max-width: 377px) {
+		.gc-hero-v2-slider .et-pb-controllers {
+			display: none !important;
 		}
 	}
 	</style>

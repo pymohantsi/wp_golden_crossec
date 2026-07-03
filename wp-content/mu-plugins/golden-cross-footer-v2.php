@@ -13,7 +13,7 @@ function golden_cross_output_footer_v2_css() {
 	<style id="golden-cross-footer-v2-css">
 	.et-l--footer .gc-footer-v2-section {
 		background: #12153a !important;
-		padding: 50px 100px 0 !important;
+		padding: 50px 50px 0 !important;
 		border-top: 2px solid #d6bd14;
 	}
 
@@ -317,21 +317,80 @@ function golden_cross_output_footer_v2_css() {
 		margin: 0 !important;
 	}
 
-	.et-l--footer .gc-footer-v2-links p,
-	.et-l--footer .gc-footer-v2-links a {
+	/* Footer link columns (Quick Links / Event Info / The Venue) use Divi's
+	   Menu module bound to a real WP menu (Appearance > Menus) so admins can
+	   manage them without touching the builder. The module renders its own
+	   nav chrome (background, flex row, mobile hamburger) which is reset
+	   here to reproduce the original plain stacked-link look exactly. */
+	.et-l--footer .gc-footer-v2-links {
+		width: 100%;
+		background: transparent !important;
+		box-shadow: none !important;
+		text-align: left !important;
+	}
+
+	/* Divi auto-adds responsive alignment classes (et_pb_text_align_right-tablet
+	   / -phone) to the Menu module; the footer link columns must stay
+	   left-aligned at every breakpoint, matching desktop. */
+	.et-l--footer .gc-footer-v2-links.et_pb_text_align_right-tablet,
+	.et-l--footer .gc-footer-v2-links.et_pb_text_align_right-phone,
+	.et-l--footer .gc-footer-v2-links.et_pb_text_align_center-tablet,
+	.et-l--footer .gc-footer-v2-links.et_pb_text_align_center-phone {
+		text-align: left !important;
+	}
+
+	.et-l--footer .gc-footer-v2-links ul.et-menu,
+	.et-l--footer .gc-footer-v2-links ul.et-menu li,
+	.et-l--footer .gc-footer-v2-links ul.et-menu li a {
+		text-align: left !important;
+	}
+
+	.et-l--footer .gc-footer-v2-links .et_pb_menu_inner_container,
+	.et-l--footer .gc-footer-v2-links .et_pb_menu__wrap,
+	.et-l--footer .gc-footer-v2-links .et_pb_menu__menu,
+	.et-l--footer .gc-footer-v2-links .et-menu-nav {
+		display: block !important;
+		width: 100%;
+		background: transparent !important;
+		min-height: 0 !important;
+	}
+
+	.et-l--footer .gc-footer-v2-links .et_mobile_nav_menu {
+		display: none !important;
+	}
+
+	.et-l--footer .gc-footer-v2-links ul.et-menu {
+		display: block !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		list-style: none !important;
+		background: transparent !important;
+	}
+
+	.et-l--footer .gc-footer-v2-links ul.et-menu li {
+		display: block !important;
+		float: none !important;
 		margin: 0 0 12px 0 !important;
 		padding: 0 !important;
+		width: auto !important;
+	}
+
+	.et-l--footer .gc-footer-v2-links ul.et-menu li:last-child {
+		margin-bottom: 0 !important;
+	}
+
+	.et-l--footer .gc-footer-v2-links ul.et-menu li a {
+		display: block;
+		margin: 0 !important;
+		padding: 0 !important;
+		border: 0 !important;
+		background: transparent !important;
 		color: rgba(255, 255, 255, 0.48);
 		font-family: 'Inter', sans-serif;
 		font-size: 13px;
 		font-weight: 400;
 		line-height: 21.45px;
 		text-decoration: none;
-	}
-
-	.et-l--footer .gc-footer-v2-links p:last-child,
-	.et-l--footer .gc-footer-v2-links a:last-child {
-		margin-bottom: 0 !important;
 	}
 
 	.et-l--footer .gc-footer-v2-bottom-row {
