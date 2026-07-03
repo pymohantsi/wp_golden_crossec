@@ -1,0 +1,4 @@
+interface:
+  display_name: "Figma to Divi"
+  short_description: "Convert approved Figma designs to Divi"
+  default_prompt: "Use $figma-to-divi-theme to inspect the approved Figma frame via MCP and build the matching Divi Theme page section by section."

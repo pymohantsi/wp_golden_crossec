@@ -1,0 +1,21 @@
+# WordPress backups
+*.zip
+*.wpress
+
+wp-content/ai1wm-backups/
+wp-content/updraft/
+wp-content/upgrade/
+
+# Cache
+wp-content/cache/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
